@@ -1,0 +1,10 @@
+<% provide(:title, "Add new car") %>
+<% if isAdmin? || isSuperAdmin? %>
+  <h1>Add new car</h1>
+<% else %>
+  <h1>Suggest new car</h1>
+<% end %>
+
+<%= render 'form' %>
+
+<%= link_to 'Back', cars_path %>
